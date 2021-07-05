@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id             :bigint           not null, primary key
+#  end_datetime   :datetime
+#  price          :decimal(8, 2)
+#  published      :boolean
+#  start_datetime :datetime
+#  title          :string
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  facility_id    :bigint
+#
+# Indexes
+#
+#  index_events_on_facility_id  (facility_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (facility_id => facilities.id)
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
