@@ -9,6 +9,7 @@
 #  updated_at :datetime         not null
 #
 class Facility < ApplicationRecord
+	has_one :address, as: :addressable
 	has_many :events
 	has_many :premises
 	has_many :campsites

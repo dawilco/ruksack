@@ -1,0 +1,31 @@
+# == Schema Information
+#
+# Table name: participant_types
+#
+#  id                            :bigint           not null, primary key
+#  max_participants_registration :integer
+#  max_participants_session      :integer
+#  min_participants_registration :integer
+#  name                          :string
+#  created_at                    :datetime         not null
+#  updated_at                    :datetime         not null
+#  event_id                      :bigint
+#
+# Indexes
+#
+#  index_participant_types_on_event_id  (event_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (event_id => events.id)
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value

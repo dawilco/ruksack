@@ -4,7 +4,6 @@
 #
 #  id             :bigint           not null, primary key
 #  end_datetime   :datetime
-#  price          :decimal(8, 2)
 #  published      :boolean
 #  start_datetime :datetime
 #  title          :string
@@ -22,7 +21,6 @@
 #
 class Event < ApplicationRecord
 	has_many :sessions
-	has_one :address, as: :addressable
-	
+
 	belongs_to :facility, optional: true
 end

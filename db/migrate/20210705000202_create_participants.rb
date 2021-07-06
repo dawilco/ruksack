@@ -4,6 +4,7 @@ class CreateParticipants < ActiveRecord::Migration[6.1]
       t.string :type
       t.string :first_name
       t.string :last_name
+      t.date :date_of_birth
 
       t.belongs_to :unit, index: true, foreign_key: true
       t.timestamps

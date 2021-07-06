@@ -4,7 +4,6 @@
 #
 #  id             :bigint           not null, primary key
 #  end_datetime   :datetime
-#  price          :decimal(8, 2)
 #  published      :boolean
 #  start_datetime :datetime
 #  title          :string

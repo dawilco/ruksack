@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: registrations
+#
+#  id             :bigint           not null, primary key
+#  amount_paid    :decimal(8, 2)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  participant_id :bigint
+#  session_id     :bigint
+#
+# Indexes
+#
+#  index_registrations_on_participant_id  (participant_id)
+#  index_registrations_on_session_id      (session_id)
+#
+require "test_helper"
+
+class RegistrationTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

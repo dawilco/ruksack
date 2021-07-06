@@ -2,13 +2,14 @@
 #
 # Table name: participants
 #
-#  id         :bigint           not null, primary key
-#  first_name :string
-#  last_name  :string
-#  type       :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  unit_id    :bigint
+#  id            :bigint           not null, primary key
+#  date_of_birth :date
+#  first_name    :string
+#  last_name     :string
+#  type          :string
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  unit_id       :bigint
 #
 # Indexes
 #

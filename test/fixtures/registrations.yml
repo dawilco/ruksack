@@ -1,23 +1,18 @@
 # == Schema Information
 #
-# Table name: events
+# Table name: registrations
 #
 #  id             :bigint           not null, primary key
-#  end_datetime   :datetime
-#  published      :boolean
-#  start_datetime :datetime
-#  title          :string
+#  amount_paid    :decimal(8, 2)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
-#  facility_id    :bigint
+#  participant_id :bigint
+#  session_id     :bigint
 #
 # Indexes
 #
-#  index_events_on_facility_id  (facility_id)
-#
-# Foreign Keys
-#
-#  fk_rails_...  (facility_id => facilities.id)
+#  index_registrations_on_participant_id  (participant_id)
+#  index_registrations_on_session_id      (session_id)
 #
 
 # This model initially had no columns defined. If you add columns to the
