@@ -13,6 +13,19 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="relative bg-white max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex justify-between">
+        <div class="flex">Ruksack</div>
+        <div>
+          <% if current_user.present? %>
+            Logout
+          <% else %>
+            <%= link_to "Sign Up", new_user_registration_path	 %>
+          <% end %>
+        </div>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
