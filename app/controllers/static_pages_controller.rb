@@ -1,3 +1,5 @@
 class StaticPagesController < ApplicationController
-	def home; end
+  layout 'static'
+
+  def home; end
 end
