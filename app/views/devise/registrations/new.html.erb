@@ -1,29 +1,59 @@
-<h2>Sign up</h2>
+<%= render "devise/shared/error_messages", resource: resource %>
+<div class="min-h-screen bg-white flex">
+  <div class="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="mx-auto w-full max-w-sm lg:w-96">
+      <div>
+        <img class="h-12 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+        <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+          Sign up
+        </h2>
+        <p class="mt-2 text-sm text-gray-600">
+          Or
+          <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+            sign in
+          </a>
+        </p>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="mt-8">
+        <div class="mt-6">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "space-y-6") do |f| %>
+            <div>
+              <%= f.label :email, class: "block text-sm font-medium text-gray-700" do %>
+                Email address
+              <% end %>
+              <div class="mt-1">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm", required: true%>
+              </div>
+            </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            <div class="space-y-1">
+              <%= f.label :password, class: "block text-sm font-medium text-gray-700" do %>
+                Password
+              <% end %>
+              <div class="mt-1">
+                <%= f.password_field :password, autocomplete: "new-password", required: true, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <%= f.label :password_confirmation, class: "block text-sm font-medium text-gray-700" do %>
+                Password
+              <% end %>
+              <div class="mt-1">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", required: true, class: "appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" %>
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <%= f.submit "Sign up", class: "mt-4 w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+  <div class="hidden lg:block relative w-0 flex-1">
+    <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80" alt="">
   </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
