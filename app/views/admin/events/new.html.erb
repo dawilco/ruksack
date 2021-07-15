@@ -54,12 +54,12 @@
       </li>
     </ol>
   </nav>
-  <form class="space-y-8 divide-y divide-gray-200 py-8 px-16 bg-white rounded">
+  <%= form_with(model: [:admin, @event], class: "space-y-8 divide-y divide-gray-200 py-8 px-16 bg-white rounded" ) do |f| %>
     <div class="space-y-8 divide-y divide-gray-200">
       <div>
         <div>
           <h3 class="text-lg leading-6 font-medium text-gray-900">
-            Profile
+            General
           </h3>
           <p class="mt-1 text-sm text-gray-500">
             This information will be displayed publicly so be careful what you share.
@@ -67,9 +67,19 @@
         </div>
 
         <div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+
+          <div class="sm:col-span-6">
+            <%= f.label :title, class: "block text-sm font-medium text-gray-700" do %>
+              Event Title
+            <% end %>
+            <div class="mt-1">
+              <%= f.text_field :title, autocomplete: "street-address", class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
+            </div>
+          </div>
+
           <div class="sm:col-span-4">
             <label for="username" class="block text-sm font-medium text-gray-700">
-              Username
+              Event URL
             </label>
             <div class="mt-1 flex rounded-md shadow-sm">
               <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
@@ -304,5 +314,5 @@
         </button>
       </div>
     </div>
-  </form>
+  <% end %>
 </div>
