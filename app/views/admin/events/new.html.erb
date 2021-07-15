@@ -73,30 +73,30 @@
               Event Title
             <% end %>
             <div class="mt-1">
-              <%= f.text_field :title, autocomplete: "street-address", class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
+              <%= f.text_field :title, class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" %>
             </div>
           </div>
 
           <div class="sm:col-span-4">
-            <label for="username" class="block text-sm font-medium text-gray-700">
+            <%= f.label :url, class: "block text-sm font-medium text-gray-700" do %>
               Event URL
-            </label>
+            <% end %>
             <div class="mt-1 flex rounded-md shadow-sm">
               <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
-                workcation.com/
+                ruksack.com/blueridgecouncil/
               </span>
-              <input type="text" name="username" id="username" autocomplete="username" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+              <%= f.text_field :url, class: "flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300" %>
             </div>
           </div>
 
           <div class="sm:col-span-6">
-            <label for="about" class="block text-sm font-medium text-gray-700">
-              About
-            </label>
+            <%= f.label :description, class: "block text-sm font-medium text-gray-700" do %>
+              Description
+            <% end %>
             <div class="mt-1">
-              <textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"></textarea>
+              <%= f.text_area :description, class: "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-gray-300 rounded-md"%>
             </div>
-            <p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+            <p class="mt-2 text-sm text-gray-500">Write a few sentences about your event.</p>
           </div>
 
           <div class="sm:col-span-6">
@@ -309,9 +309,7 @@
         <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           Cancel
         </button>
-        <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          Save
-        </button>
+        <%= f.submit "Save", class: "ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" %>
       </div>
     </div>
   <% end %>
