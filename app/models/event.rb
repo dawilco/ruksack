@@ -5,6 +5,7 @@
 #  id             :bigint           not null, primary key
 #  description    :text
 #  end_datetime   :datetime
+#  payment_types  :string
 #  published      :boolean
 #  start_datetime :datetime
 #  title          :string
@@ -22,7 +23,7 @@
 #  fk_rails_...  (facility_id => facilities.id)
 #
 class Event < ApplicationRecord
-	has_many :sessions
+  has_many :sessions
 
-	belongs_to :facility, optional: true
+  belongs_to :facility, optional: true
 end

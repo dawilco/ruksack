@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_15_011202) do
+ActiveRecord::Schema.define(version: 2021_07_15_013752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(version: 2021_07_15_011202) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "url"
     t.text "description"
+    t.string "payment_types", default: [], array: true
     t.index ["facility_id"], name: "index_events_on_facility_id"
   end
 
