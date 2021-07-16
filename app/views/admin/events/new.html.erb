@@ -157,26 +157,26 @@
                   <%= f.check_box :payment_types, { multiple: true, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" }, "credit", nil %> 
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="comments" class="font-medium text-gray-700">Credit Card</label>
+                  <label class="font-medium text-gray-700">Credit Card</label>
                   <p class="text-gray-500">Visa, Mastercard, American Express or Discover</p>
                 </div>
               </div>
               <div class="relative flex items-start">
                 <div class="flex items-center h-5">
-                  <input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                   <%= f.check_box :payment_types, { multiple: true, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" }, "ach", nil %> 
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="candidates" class="font-medium text-gray-700">Candidates</label>
-                  <p class="text-gray-500">Get notified when a candidate applies for a job.</p>
+                  <label class="font-medium text-gray-700">E-Check</label>
+                  <p class="text-gray-500">ACH transfers at a lower fee</p>
                 </div>
               </div>
               <div class="relative flex items-start">
                 <div class="flex items-center h-5">
-                  <input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  <%= f.check_box :payment_types, { multiple: true, class: "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded" }, "ach", nil %> 
                 </div>
                 <div class="ml-3 text-sm">
-                  <label for="offers" class="font-medium text-gray-700">Offers</label>
-                  <p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.</p>
+                  <label for="offers" class="font-medium text-gray-700">Manual</label>
+                  <p class="text-gray-500">Accept payments by mail or at the door with your own terminal. Usage fees still apply</p>
                 </div>
               </div>
             </div>
