@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :dashboard
     resources :events
+    resources :settings, only: %i[index]
+    scope 'stripe', as: :stripe do
+      controller :stripe_connect do
+        get :account_setup
+      end
+    end
   end
 end
