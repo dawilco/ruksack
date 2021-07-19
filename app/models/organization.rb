@@ -9,4 +9,6 @@
 #  stripe_account_id :string
 #
 class Organization < ApplicationRecord
+  has_many :events
+  has_many :facilities
 end
