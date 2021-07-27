@@ -28,5 +28,5 @@ class Event < ApplicationRecord
   has_many :sessions
 
   belongs_to :facility, optional: true
-  belongs_to :organization
+  belongs_to :organization, optional: true # TODO: Enforce this later
 end
