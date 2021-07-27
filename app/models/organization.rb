@@ -11,4 +11,5 @@
 class Organization < ApplicationRecord
   has_many :events
   has_many :facilities
+  has_many :users
 end
