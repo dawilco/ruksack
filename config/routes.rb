@@ -14,4 +14,11 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  # org pages
+  scope "/:organization_name", :as => "organization" do
+    controller :registration_dashboard do 
+      get '/', action: :dashboard
+    end
+  end
 end

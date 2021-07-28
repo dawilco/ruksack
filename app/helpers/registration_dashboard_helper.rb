@@ -1,0 +1,2 @@
+module RegistrationDashboardHelper
+end
