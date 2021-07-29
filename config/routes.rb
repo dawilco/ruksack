@@ -20,5 +20,10 @@ Rails.application.routes.draw do
     controller :registration_dashboard do 
       get '/', action: :dashboard
     end
+    scope "/:event_url", :as => "event" do
+      controller :events do
+        get '/', action: :index
+      end
+    end
   end
 end
